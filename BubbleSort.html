@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>BubbleSort</title>
+		<script>
+			function bubbleSort(){
+				var vet = new Array(20, 15, 12, 10, 8, 5);
+				var aux;
+
+				for(i = 0; i < vet.length; i++){
+					for(j = 0; j < vet.length-1; j++){
+						if(vet[j] > vet[j+1]){
+							aux = vet[j];
+							vet[j] = vet[j+1];
+							vet[j+1] = aux;
+						}
+					}
+
+					console.log(vet);	
+				}
+			}
+		</script>
+	</head>
+	<body onload = "bubbleSort()">
+
+	</body>
+</html>
