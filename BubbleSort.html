@@ -8,6 +8,8 @@
 				var vet = new Array(20, 15, 12, 10, 8, 5);
 				var aux;
 
+				var start = performance.now();
+
 				for(i = 0; i < vet.length; i++){
 					for(j = 0; j < vet.length-1; j++){
 						if(vet[j] > vet[j+1]){
@@ -19,6 +21,10 @@
 
 					console.log(vet);	
 				}
+
+				var finish = performance.now();
+				var total = finish - start;
+				console.log("Timer: " +total);
 			}
 		</script>
 	</head>
