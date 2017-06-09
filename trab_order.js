@@ -149,9 +149,9 @@ console.log("--------------------------------\n");
 console.log("Insertion Sort - 100 elementos\n");
 insertionSort(insertionSort100, aux);
 console.log("--------------------------------\n");
-console.log("Quick Sort - 100 elementos\n");
-insertionSort(quickSort100, aux);
-console.log("--------------------------------\n");
+/*console.log("Quick Sort - 100 elementos\n");
+quickSort(quickSort100, aux);
+console.log("--------------------------------\n");*/
 
 
 
@@ -164,9 +164,9 @@ console.log("--------------------------------\n");
 console.log("Insertion Sort - 1.000 elementos\n");
 insertionSort(insertionSort1000, aux);
 console.log("--------------------------------\n");
-console.log("Quick Sort - 1.000 elementos\n");
-insertionSort(quickSort1000, aux);
-console.log("--------------------------------\n");
+/*console.log("Quick Sort - 1.000 elementos\n");
+quickSort(quickSort1000, aux);
+console.log("--------------------------------\n");*/
 
 
 
@@ -179,9 +179,9 @@ console.log("--------------------------------\n");
 console.log("Insertion Sort - 100.00 elementos\n");
 insertionSort(insertionSort10000, aux);
 console.log("--------------------------------\n");
-console.log("Quick Sort - 10.000 elementos\n");
-insertionSort(quickSort10000, aux);
-console.log("--------------------------------\n");
+/*console.log("Quick Sort - 10.000 elementos\n");
+quickSort(quickSort10000, aux);
+console.log("--------------------------------\n");*/
 
 
 
@@ -194,6 +194,6 @@ console.log("--------------------------------\n");
 console.log("Insertion Sort - 100.000 elementos\n");
 insertionSort(insertionSort100000, aux);
 console.log("--------------------------------\n");
-console.log("Quick Sort - 100.000 elementos\n");
-insertionSort(quickSort100000, aux);
-console.log("--------------------------------\n");
+/*console.log("Quick Sort - 100.000 elementos\n");
+quickSort(quickSort100000, aux);
+console.log("--------------------------------\n");*/
