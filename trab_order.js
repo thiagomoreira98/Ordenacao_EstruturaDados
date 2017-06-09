@@ -84,7 +84,7 @@ function bubbleSort(vet , aux){
 	}
 
 	finish();
-	console.log("vet:" +vet);
+	console.log(vet);
 	console.log("\nTimer: " +total() + "ms");
 }
 
@@ -104,7 +104,7 @@ function selectionSort(vet, aux){
 	}
 
 	finish();
-	console.log("vet:" +vet);
+	console.log(vet);
 	console.log("\nTimer: " +total() + "ms");
 }
 
@@ -124,7 +124,7 @@ function insertionSort(vet, aux){
 	}
 
 	finish();
-	console.log("vet:" +vet);
+	console.log(vet);
 	console.log("\nTimer: " +total() + "ms");
 }
 
@@ -135,7 +135,7 @@ function quickSort(vet, aux){
 
 
 	finish();
-	console.log("vet:" +vet);
+	console.log(vet);
 	console.log("\nTimer: " +total() + "ms");
 
 }
