@@ -70,14 +70,14 @@
 					return finish;
 				}
 
-				function total(){
-					var total = finish() - start();
+				function total(start, finish){
+					var total = finish - start;
 					return total;
 				}
 
 				function bubbleSort(vet , aux){
 
-					start();
+					var start1 = start();
 
 					for(i = 0; i < vet.length; i++){
 						for(j = 0; j < vet.length-1; j++){
@@ -87,17 +87,16 @@
 								vet[j+1] = aux;
 							}
 						}
-						//console.log(vet);	
 					}
 
-					finish();
+					var finish1 = finish();
 					console.log(vet);
-					console.log("\nTimer: " +total() + "ms");
+					console.log("\nTimer: " +total(start1, finish1) + "ms");
 				}
 
 				function selectionSort(vet, aux){
 
-					start();
+					var start2 = start();
 
 					for(i = 0; i < vet.length; i++){
 						for(j = i+1; j < vet.length; j++){
@@ -107,17 +106,16 @@
 								vet[j] = aux;
 							}
 						}
-						//console.log(vet);		
 					}
 
-					finish();
+					var finish2 = finish()
 					console.log(vet);
-					console.log("\nTimer: " +total() + "ms");
+					console.log("\nTimer: " +total(start2, finish2) + "ms");
 				}
 
 				function insertionSort(vet, aux){
 
-					start();
+					var start3 = start();
 
 					for(i = 0; i < vet.length; i++){
 						for(j = i+1; j <vet.length; j++){
@@ -127,25 +125,24 @@
 								vet[i] = aux;
 							}
 						}
-						//console.log(vet);	
 					}
 
-					finish();
+					var finish3 = finish()
 					console.log(vet);
-					console.log("\nTimer: " +total() + "ms");
+					console.log("\nTimer: " +total(start3, finish3) + "ms");
 				}
 
-				function quickSort(vet, aux){
+				/*function quickSort(vet, aux){
 
-					start();
+					var start4 = start();
 
 
 
-					finish();
+					var finish4 = finish();
 					console.log(vet);
-					console.log("\nTimer: " +total() + "ms");
+					console.log("\nTimer: " +total(start4, finish4) + "ms");
 
-				}
+				}*/
 
 				console.log("\nBubble Sort - 100 elementos\n");
 				bubbleSort(bubbleSort100, aux);
@@ -183,7 +180,7 @@
 				console.log("Selection Sort - 10.000 elementos\n");
 				selectionSort(selectionSort10000,aux);
 				console.log("--------------------------------\n");
-				console.log("Insertion Sort - 100.00 elementos\n");
+				console.log("Insertion Sort - 10.000 elementos\n");
 				insertionSort(insertionSort10000, aux);
 				console.log("--------------------------------\n");
 				/*console.log("Quick Sort - 10.000 elementos\n");
