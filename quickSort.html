@@ -4,11 +4,32 @@
 		<meta charset="utf-8">
 		<title>Quick Sort</title>
 		<script>
-			function quickSort(){
-	
-				var vet = new Array(20, 15, 12, 10, 8, 5);
-				var aux, i, j;
 
+			function quickSort(){
+				var vet = new Array(20, 15, 12, 10, 8, 5);
+				var pivo = vet[vet.length / 2];
+				var index = vet.length / 2;
+				var j, i, aux;
+
+				for(j = index + 1; j < vet.length; j++){
+					i = 0;
+					if((vet[i] > pivo) && (vet[j] < pivo)){
+						aux = vet[i];
+						vet[i] = vet[j];
+						vet[j] = aux;
+					}
+					else{
+						if(i <= index){
+							i++;
+						}
+					}
+
+					if(i == j){
+						return;
+					}
+				}
+				quickSort();
+				console.log(vet);	
 			}
 		</script>
 	</head>
