@@ -30,7 +30,7 @@
 
 				//Clonando Vetores
 				for(i = 0; i < 100000; i++){
-					vet.push(Math.floor((Math.random() * 999998) + 1) );
+					vet.push(Math.floor((Math.random() * 100000)) );
 
 					if(i == 99){
 						bubbleSort100 = vet.slice();
@@ -96,7 +96,7 @@
 
 					var finish1 = finish();
 					console.log(vet);
-					console.log("\nTimer: " +total(start1, finish1) + "ms");
+					console.log("\nTimer: " +total(start1, finish1) + " ms");
 				}
 
 				//Metodo Selection Sort
@@ -116,7 +116,7 @@
 
 					var finish2 = finish()
 					console.log(vet);
-					console.log("\nTimer: " +total(start2, finish2) + "ms");
+					console.log("\nTimer: " +total(start2, finish2) + " ms");
 				}
 
 				//Metodo Insertion Sort
@@ -125,7 +125,7 @@
 					var start3 = start();
 
 					for(i = 0; i < vet.length; i++){
-						for(j = i+1; j <vet.length; j++){
+						for(j = i+1; j < vet.length; j++){
 							if(vet[j] < vet[i]){
 								aux = vet[j];
 								vet[j] = vet[i];
@@ -136,21 +136,46 @@
 
 					var finish3 = finish()
 					console.log(vet);
-					console.log("\nTimer: " +total(start3, finish3) + "ms");
+					console.log("\nTimer: " +total(start3, finish3) + " ms");
 				}
 
 				//Metodo Quick Sort
-				/*function quickSort(vet, aux){
+				function partition(vet[], left, right){
+					var i, j, aux;
+					i = left;
+
+					for(j = left + 1; j <= right; j++){
+						if(vet[j] < vet[left]){
+							++i;
+							aux = vet[i];
+							vet[i] = vet[i];
+							vet[j] = aux;
+						}
+					}
+
+					aux = vet[left];
+					vet[left] = vet[i];
+					vet[i] = aux;
+					return i;
+				}
+
+				function quickSort(vet[], left, right){
 
 					var start4 = start();
 
+					var r;
 
+					if(right > left){
+						r = partition(vet, left, right);
+						quickSort(vet, left, r - 1);
+						quickSort(vet, r + 1, right);
+					}		
 
 					var finish4 = finish();
 					console.log(vet);
 					console.log("\nTimer: " +total(start4, finish4) + "ms");
-
-				}*/
+				}
+				
 
 				console.log("\nBubble Sort - 100 elementos\n");
 				bubbleSort(bubbleSort100, aux);

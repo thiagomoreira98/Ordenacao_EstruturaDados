@@ -5,31 +5,33 @@
 		<title>Quick Sort</title>
 		<script>
 
-			function quickSort(){
-				var vet = new Array(20, 15, 12, 10, 8, 5);
-				var pivo = vet[vet.length / 2];
-				var index = vet.length / 2;
-				var j, i, aux;
+			function partition(vet[], left, right){
+				var i, j, aux;
+				i = left;
 
-				for(j = index + 1; j < vet.length; j++){
-					i = 0;
-					if((vet[i] > pivo) && (vet[j] < pivo)){
+				for(j = left + 1; j <= right; j++){
+					if(vet[j] < vet[left]){
+						++i;
 						aux = vet[i];
-						vet[i] = vet[j];
+						vet[i] = vet[i];
 						vet[j] = aux;
 					}
-					else{
-						if(i <= index){
-							i++;
-						}
-					}
-
-					if(i == j){
-						return;
-					}
 				}
-				quickSort();
-				console.log(vet);	
+
+				aux = vet[left];
+				vet[left] = vet[i];
+				vet[i] = aux;
+				return i;
+			}
+
+			function quickSort(vet[], left, right){
+					var r;
+
+					if(right > left){
+						r = partition(vet, left, right);
+						quickSort(vet, left, r - 1);
+						quickSort(vet, r + 1, right);
+					}		
 			}
 		</script>
 	</head>
