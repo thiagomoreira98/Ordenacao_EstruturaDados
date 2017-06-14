@@ -140,7 +140,7 @@
 				}
 
 				//Metodo Quick Sort
-				function partition(vet[], left, right){
+				function partition(vet, left, right){
 					var i, j, aux;
 					i = left;
 
@@ -159,14 +159,12 @@
 					return i;
 				}
 
-				function quickSort(vet[], left, right){
+				function quickSort(vet, left, right){
 
 					var start4 = start();
 
-					var r;
-
 					if(right > left){
-						r = partition(vet, left, right);
+						var r = partition(vet, left, right);
 						quickSort(vet, left, r - 1);
 						quickSort(vet, r + 1, right);
 					}		
@@ -175,7 +173,7 @@
 					console.log(vet);
 					console.log("\nTimer: " +total(start4, finish4) + "ms");
 				}
-				
+
 
 				console.log("\nBubble Sort - 100 elementos\n");
 				bubbleSort(bubbleSort100, aux);
@@ -186,9 +184,9 @@
 				console.log("Insertion Sort - 100 elementos\n");
 				insertionSort(insertionSort100, aux);
 				console.log("--------------------------------\n");
-				/*console.log("Quick Sort - 100 elementos\n");
+				console.log("Quick Sort - 100 elementos\n");
 				quickSort(quickSort100, aux);
-				console.log("--------------------------------\n");*/
+				console.log("--------------------------------\n");
 
 
 
